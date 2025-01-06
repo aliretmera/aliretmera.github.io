@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+    <!-- plugins & libraries css -->
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/vendor/font-awesome/all.min.css">
+    <!-- tailwind css -->
+    <link rel="stylesheet" href="src/output.css">
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="ed-overlay group">
+        <div class="fixed inset-0 z-[100] group-[.active]:bg-edblue/80 duration-[400ms] pointer-events-none group-[.active]:pointer-events-auto"></div>
+    </div>
+    <!-- sidebar -->
+    <div class="ed-sidebar">
+        <div class="translate-x-[100%] transition-transform ease-linear duration-300 fixed right-0 w-full max-w-[25%] xl:max-w-[30%] lg:max-w-[40%] md:max-w-[50%] sm:max-w-[60%] xxs:max-w-full bg-white h-full z-[100] overflow-auto">
+            <!-- heading -->
+            <div class="ed-sidebar-heading p-[20px] lg:p-[20px] border-b border-edgray/20">
+                <div class="logo flex justify-between items-center">
+                    <a href="/" class="text-[20px] font-normal">Menu</a>
+
+                    <button type="button" class="ed-sidebar-close-btn border border-edgray/20 w-[45px] aspect-square shrink-0 text-black text-[22px] rounded-full hover:text-edpurple"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+            </div>
+
+            <!-- mobile menu -->
+            <div class="ed-header-nav-in-mobile"></div>
+        </div>
+    </div>
+    <!-- HEADER SECTION START -->
+    <header class="absolute z-[99] top-0 inset-x-[100px] xxl:inset-x-[30px] xl:inset-x-0 bg-white rounded-bl-[10px] rounded-br-[10px]">
+        <!-- bottom header -->
+        <div class="px-[30px] xxl:px-[15px] lg:px-[20px] py-[28px] lg:py-[18px] flex justify-between to-be-fixed">
+            <div class="flex lg:items-center lg:gap-[60px] xxs:gap-[30px]">
+                <div class="flex items-center gap-[100px] xl:gap-[30px] lg:gap-y-0">
+                    <!-- nav -->
+                    <div class="ed-header-nav-container">
+                        <ul class="to-go-to-sidebar-in-mobile ed-header-nav flex lg:flex-col gap-x-[43px] xl:gap-x-[33px] font-kanit text-[17px] font-normal">
+                            <li><a href="/">Contact us</a></li>
+                            <li><a href="/privacy.html">Privacy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- mobile menu button -->
+                <button type="button" class="ed-mobile-menu-open-btn hidden lg:inline-block text-edblue text-[18px]"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+    <!-- HEADER SECTION END -->
+    <main>
+        <!-- BREADCRUMB SECTION START -->
+        <section class="pt-[0px] xl:pt-[20px] lg:pt-[20px] sm:pt-[20px] xxs:pt-[20px] pb-[158px] xl:pb-[118px] lg:pb-[98px] sm:pb-[68px] xs:pb-[48px] text-center bg-[url('../assets/img/breadcrumb-bg.jpg')] bg-no-repeat bg-cover bg-center relative z-[1] overflow-hidden before:absolute before:-z-[1] before:inset-0 before:bg-edblue/70 before:pointer-events-none">
+
+        </section>
+        <!-- BREADCRUMB SECTION END -->
+
+
+        <!-- CONTACT SECTION START -->
+        <section class="py-[120px] xl:py-[80px] md:py-[60px]">
+            <div class="container mx-auto max-w-[1200px] px-[12px] xl:max-w-full">
+                <div class="grid grid-cols-2 md:grid-cols-1 gap-[60px] xl:gap-[40px] items-center">
+                    <!-- left side contact infos -->
+                    <div class="rounded-[16px] overflow-hidden">
+                        <div class="bg-edpurple p-[40px] sm:p-[30px] xxs:p-[20px] space-y-[24px] text-[16px]">
+
+                            <!-- single contact info -->
+                            <div class="flex flex-wrap xxs:flex-col items-center xxs:items-start gap-[20px] gap-y-[10px] pb-[20px] text-white border-b border-white/30 last:border-0 last:pb-0">
+                                <span class="icon shrink-0 border border-dashed border-white rounded-full h-[62px] w-[62px] flex items-center justify-center">
+                                    <img src="assets/img/icon/mail-at.svg" alt="icon">
+                                </span>
+
+                                <div class="txt">
+                                    <span class="font-normal">If you have any questions or suggestions, do not hesitate to contact me at</span>
+                                    <h4 class="font-medium text-[24px] xxs:text-[22px]"><a href="mailto:aliretmera@gmail.com">aliretmera@gmail.com</a></h4>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- right side contact form -->
+                    <div>
+                        <h2 class="text-[40px] md:text-[35px] sm:text-[30px] xxs:text-[28px] font-semibold text-edblue mb-[7px]">Ready to Get Started?</h2>
+                        <p class="error-msg" id="error-msg"></p>
+                        <div id="simple-msg" class="simple-msg"></div>
+                        <form method="post" name="myForm" id="myForm" class="grid grid-cols-2 xxs:grid-cols-1 gap-[30px] xs:gap-[20px] text-[16px]" onsubmit="return validateForm()">
+                            <div>
+                                <label for="ed-contact-name" class="font-lato font-semibold text-edblue block mb-[12px]">Your Name*</label>
+                                <input type="text" name="name" id="ed-contact-name" placeholder="Your Name" class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none">
+                            </div>
+                            <div>
+                                <label for="ed-contact-email" class="font-lato font-semibold text-edblue block mb-[12px]">Your Email*</label>
+                                <input type="email" name="email" id="ed-contact-email" placeholder="Your Email" class="border border-[#ECECEC] h-[55px] px-[20px] xs:px-[15px] rounded-[4px] w-full focus:outline-none">
+                            </div>
+                            <div class="col-span-2 xxs:col-span-1">
+                                <label for="ed-contact-message" class="font-lato font-semibold text-edblue block mb-[12px]">Your Message*</label>
+                                <textarea name="message" id="ed-contact-message" placeholder="Your Message" class="border border-[#ECECEC] h-[145px] p-[20px] rounded-[4px] w-full focus:outline-none"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="bg-edpurple h-[55px] px-[24px] rounded-[10px] text-[16px] font-medium text-white hover:bg-edblue">Send Message <span class="icon pl-[10px]"><i class="fa-solid fa-arrow-right-long"></i></span></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- CONTACT SECTION END -->
+    </main>
+
+    <!-- FOOTER SECTION START -->
+    <footer class="bg-edblue relative z-[1] before:absolute before:inset-0 before:-z-[1] before:bg-[url('../assets/img/footer-bg.jpg')] before:opacity-[7%] before:bg-no-repeat before:bg-cover before:bg-center text-white">
+        <div class="mx-[19.71%] xxxl:mx-[14.71%] xxl:mx-[9.71%] xl:mx-[5.71%] md:mx-[12px]">
+            <!-- footer top -->
+            
+
+            <!-- footer bottom -->
+            <div class="flex flex-wrap items-center justify-between gap-[15px] pt-[20px] pb-[50px] text-[#d9d9d9]">
+                <p>&copy; All Copyright 2025</p>
+
+                <div class="flex flex-wrap gap-[40px] xxs:gap-[15px]">
+                    <a href="/index.html" class="hover:text-edyellow">Contact Us</a>
+                    <a href="/privacy.html" class="hover:text-edyellow">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER SECTION END -->
+
+
+    <!-- js -->
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/fslightbox/fslightbox.js"></script>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
