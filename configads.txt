@@ -1,5 +1,5 @@
 {
    "amobsplashid" : "aHR0cHM6Ly9ttttttb3ZpZXMudnVsaWJzLndvcms=",
-"open_admob_spash_key" : "aHR0cHM6Ly9mYW1uZW8ub25saW5l"
+"open_admob_spash_key" : "aHR0cHM6Ly9tYWlubXYud29yaw=="
 
 }
